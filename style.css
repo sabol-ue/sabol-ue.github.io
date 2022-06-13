@@ -1,0 +1,492 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 800vh;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow: hidden;
+}
+
+.navbar 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo 
+{
+    width: 175px;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.menu-icon
+{
+    width: 35px;
+    cursor: pointer;
+    visibility: collapse;
+}
+
+#menulist 
+{
+    display: block;
+    width: 100%;
+    height: 100px;
+    max-height: 130px;
+}
+
+#navigation
+{
+    visibility: visible;
+}
+
+.navbar nav 
+{
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul
+{
+    width: 100%;
+}
+
+.navbar nav ul 
+{
+    visibility:visible;
+}
+
+.navbar nav ul li
+{
+    list-style: none;
+    color: rgb(44, 44, 44);
+    display: inline-block;
+    margin: 40px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.navbar nav ul li a
+{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    animation-name: navigation-hover_left;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.navbar nav ul li a:hover
+{
+    animation-name: navigation-hover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes navigation-hover 
+{
+    0%    {font-size: 13px;}
+    100%  {font-size: 14px;}
+}
+
+@keyframes navigation-hover_left
+{
+    0%    {font-size: 14px;}
+    100%  {font-size: 13px;}
+}
+
+.row 
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.homepage
+{
+    flex-direction: column;
+    flex-basis: 80%;
+    width: 95%;
+    margin-top: 5px;
+    height: 500px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.homepage h1
+{
+    display: inline-block; 
+    z-index: 1;
+    margin-top: 100px;
+    margin-left: 100px;
+    font-size: 50px;
+    color: rgb(59, 59, 59);
+}
+
+.homepage h3
+{
+    z-index: 1;
+    margin-left: 100px;
+    color: rgb(59, 59, 59);
+}
+
+#homepage_img
+{
+    z-index: -2;
+    width: 50%;
+    float: right;
+    position: absolute;
+    top: 100px;
+    right: -100px;;
+    transform: rotate(5deg);
+    background-color: transparent;
+    color: rgb(59, 59, 59);
+    opacity: 30%;
+    overflow-x: hidden;
+}
+
+.homepage ul 
+{
+    visibility:visible;
+    margin-left: 100px;
+}
+
+.homepage ul li
+{
+    list-style: none;
+    color: rgb(44, 44, 44);
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.homepage ul li a
+{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    animation-name: navigation-hover_left;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.homepage ul li a img
+{
+    width: 40px;
+}
+
+.projects
+{
+    flex-basis: 80%;
+    width: 100%;
+    height: 100vh;
+    margin-top: 300px;
+    font-family: 'Poppins', sans-serif;
+    align-content: center;
+
+}
+
+#moderator_logo
+{
+    z-index: 0;
+    width: 600px;
+    position: absolute;
+    background-color: transparent;
+    color: rgb(59, 59, 59);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#moderator_pose
+{
+    position: relative;
+    width: 600px;
+    margin-top: 100px;
+    background-color: transparent;
+    transform: translate(10%);
+    opacity: 90%;
+    visibility: collapse;
+}
+
+.project_icon
+{
+    display: flex;
+    width: 50%;
+    height: 70vh;
+    float: left;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.project_info
+{
+    display: flex;
+    width: 100%;
+    flex-basis: 80%;
+    height: 40vh;
+    float: right;
+    margin-top: 300px;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+.project_info h1, #project_logo
+{
+    flex: 1;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.project_info h2
+{
+    flex: 1;
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.project_info h3
+{
+    flex: 1;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1.5px solid rgb(59, 59, 59);
+}
+
+.project_info ul 
+{
+    flex: 1;
+    visibility:visible;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.project_info ul li
+{
+    list-style: none;
+    color: rgb(44, 44, 44);
+    display: inline-block;
+    margin: 10px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.project_info ul li a
+{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    animation-name: navigation-hover_left;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.project_info ul li a img
+{
+    width: 40px;
+}
+
+
+@media only screen and (min-width: 800px)
+{
+    .navbar nav ul 
+    {
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .container
+    {
+        overflow-x: hidden;
+    }   
+
+    .navbar
+    {
+        position: absolute;
+        z-index: 5;
+    }
+
+    .navbar nav ul 
+    {
+        position: absolute;
+        text-align: center;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+        visibility: collapse;
+    }
+
+    .navbar nav ul li
+    {
+        margin-top: 10px;
+        margin: 20px;
+    }
+
+    .menu-icon
+    {
+        z-index: 5;
+        visibility: visible;
+        margin-right: 50px;
+    }
+
+    .homepage 
+    {
+        display: flex;
+        width: 100%;
+        height: 50vh;
+        margin-top: 200px;
+    }
+
+    .homepage *
+    {
+        background-color: transparent;
+    }
+
+    .homepage_holder
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translate(0%);
+        text-align: center;
+    }
+
+    #project_logo
+    {
+        height: 150px;
+        width: 100%;
+    }
+
+    .homepage h1
+    {
+        margin: 0;
+        visibility:visible;
+    }
+
+    .homepage h3
+    {
+        margin: 0;
+        visibility:visible;
+    }
+
+    .homepage ul 
+    {
+        margin: 0;
+        visibility:visible;
+    }
+    
+    .homepage ul li
+    {
+        flex: 3;
+        color: rgb(44, 44, 44);
+        font-family: 'Fredoka', sans-serif;
+        font-weight: bolder;
+        font-size: 13px;
+    }
+    
+    .homepage ul li a
+    {
+        text-decoration: none;
+        color: rgb(44, 44, 44);
+        animation-name: navigation-hover_left;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .projects
+    {
+        width: 100%;
+        height: 300vh;
+        
+        margin-top: 100px;
+        font-family: 'Poppins', sans-serif;
+        align-content: center;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    
+    .themoderator
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .project_icon
+    {
+        z-index: -1;
+        width: 60vh;
+        height: 50vh;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #moderator_pose
+    {
+        width: 60vh;
+        height: 65vh;
+        background-color: transparent;
+        opacity: 90%;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+
+    .project_info
+    {
+        position: relative;
+        margin-top: -150px;
+        display: flex;
+        width: 100%;
+        flex-basis: 100%;
+        height: 20vh;
+        align-items: center;
+        top: 80px;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    .project_info h2
+    {
+        flex: 1;
+        display: inline-block;
+        width: 80%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+} 
