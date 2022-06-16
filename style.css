@@ -13,8 +13,9 @@ html
 
 .container
 {
+    position: absolute;
     width: 100%;
-    min-height: 800vh;
+    min-height: 750vh;
     padding-left: 2%;
     padding-right: 2%;
     overflow: hidden;
@@ -92,9 +93,11 @@ html
 
 .navbar nav ul li a:hover
 {
+    /*
     animation-name: navigation-hover;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    */
 }
 
 @keyframes navigation-hover 
@@ -105,7 +108,7 @@ html
 
 @keyframes navigation-hover_left
 {
-    0%    {font-size: 14px;}
+    0%    {font-size: 13.5px;}
     100%  {font-size: 13px;}
 }
 
@@ -119,6 +122,7 @@ html
 
 .homepage
 {
+    position: inherit;
     flex-direction: column;
     flex-basis: 80%;
     width: 95%;
@@ -133,7 +137,7 @@ html
     display: inline-block; 
     z-index: 1;
     margin-top: 100px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     font-size: 50px;
     color: rgb(59, 59, 59);
 }
@@ -141,8 +145,14 @@ html
 .homepage h3
 {
     z-index: 1;
-    margin-left: 100px;
+    /* margin-left: 100px; */
     color: rgb(59, 59, 59);
+}
+
+.homepage p 
+{
+    text-align: center;
+    margin: 0;
 }
 
 #homepage_img
@@ -191,132 +201,22 @@ html
     width: 40px;
 }
 
-.projects
+footer 
 {
-    flex-basis: 80%;
-    width: 100%;
-    height: 100vh;
-    margin-top: 300px;
-    font-family: 'Poppins', sans-serif;
-    align-content: center;
-
-}
-
-#moderator_logo
-{
-    z-index: 0;
-    width: 600px;
     position: absolute;
-    background-color: transparent;
-    color: rgb(59, 59, 59);
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#moderator_pose
-{
-    position: relative;
-    width: 600px;
-    margin-top: 100px;
-    background-color: transparent;
-    transform: translate(10%);
-    opacity: 90%;
-    visibility: collapse;
-}
-
-.project_icon
-{
-    display: flex;
-    width: 50%;
-    height: 70vh;
-    float: left;
-    margin-top: 50px;
-    align-items: center;
-}
-
-.project_info
-{
-    display: flex;
+    bottom: 0;
     width: 100%;
-    flex-basis: 80%;
-    height: 40vh;
-    float: right;
-    margin-top: 300px;
+    height: 150px;
     align-items: center;
-    flex-direction: column;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
+
 }
 
-.project_info h1, #project_logo
+footer img
 {
-    flex: 1;
-    text-align: center;
-    display: inline-block;
-    width: 50%;
-    margin-bottom: 10px;
-    font-size: 30px;
-    background-color: transparent;
+    transform: translate(15%, 50%);;
+    width: 175px;
+    margin-left: 15%;
 }
-
-.project_info h2
-{
-    flex: 1;
-    display: inline-block;
-    width: 80%;
-    margin-bottom: 10px;
-    font-size: 18px;
-    text-align: center;
-    background-color: transparent;
-}
-
-.project_info h3
-{
-    flex: 1;
-    display: inline-block;
-    width: 20%;
-    text-align: center;
-    margin-bottom: 10px;
-    border: 1.5px solid rgb(59, 59, 59);
-}
-
-.project_info ul 
-{
-    flex: 1;
-    visibility:visible;
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: transparent;
-}
-
-.project_info ul li
-{
-    list-style: none;
-    color: rgb(44, 44, 44);
-    display: inline-block;
-    margin: 10px;
-    font-family: 'Fredoka', sans-serif;
-    font-weight: bolder;
-    font-size: 13px;
-}
-
-.project_info ul li a
-{
-    text-decoration: none;
-    color: rgb(44, 44, 44);
-    animation-name: navigation-hover_left;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-.project_info ul li a img
-{
-    width: 40px;
-}
-
 
 @media only screen and (min-width: 800px)
 {
@@ -331,6 +231,7 @@ html
     .container
     {
         overflow-x: hidden;
+        min-height: 1050vh;
     }   
 
     .navbar
@@ -384,12 +285,6 @@ html
         text-align: center;
     }
 
-    #project_logo
-    {
-        height: 150px;
-        width: 100%;
-    }
-
     .homepage h1
     {
         margin: 0;
@@ -424,69 +319,5 @@ html
         animation-name: navigation-hover_left;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
-    }
-
-    .projects
-    {
-        width: 100%;
-        height: 300vh;
-        
-        margin-top: 100px;
-        font-family: 'Poppins', sans-serif;
-        align-content: center;
-        justify-content: center;
-        overflow-x: hidden;
-    }
-    
-    .themoderator
-    {
-        width: 100%;
-        height: 100%;
-    }
-
-    .project_icon
-    {
-        z-index: -1;
-        width: 60vh;
-        height: 50vh;
-        align-content: center;
-        justify-content: center;
-    }
-
-    #moderator_pose
-    {
-        width: 60vh;
-        height: 65vh;
-        background-color: transparent;
-        opacity: 90%;
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        transform: translate(-50%, -50%);
-        visibility: hidden;
-    }
-
-    .project_info
-    {
-        position: relative;
-        margin-top: -150px;
-        display: flex;
-        width: 100%;
-        flex-basis: 100%;
-        height: 20vh;
-        align-items: center;
-        top: 80px;
-        background-color: transparent;
-        text-align: center;
-    }
-
-    .project_info h2
-    {
-        flex: 1;
-        display: inline-block;
-        width: 80%;
-        margin-bottom: 10px;
-        font-size: 14px;
-        text-align: center;
     }
 } 
